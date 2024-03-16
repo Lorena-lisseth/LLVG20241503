@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LLVG20240315.Models
 {
@@ -11,8 +12,11 @@ namespace LLVG20240315.Models
         }
 
         public int Id { get; set; }
+        [Required(ErrorMessage = "Es necesario ingresar el nombre")]
         public string? Nombre { get; set; }
+        [Required(ErrorMessage = "Es necesario ingresar la dirección")]
         public string? Direccion { get; set; }
+        [Required(ErrorMessage = "Es necesario ingresar la dirección")]
         public string? Correo { get; set; }
 
         public virtual IList<NumerosTelefono> NumerosTelefonos { get; set; }
