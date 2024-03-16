@@ -28,6 +28,9 @@
                 <input asp-for="Correo" class="form-control" />
                 <span asp-validation-for="Correo" class="text-danger"></span>
             </div>
+            <div class="row col-md-12">
+                @await Html.PartialAsync("_NumerosTelefono", Model.NumerosTelefonos)
+            </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
